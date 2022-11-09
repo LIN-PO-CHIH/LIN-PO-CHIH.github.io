@@ -1,6 +1,6 @@
 const submitBtn = document.querySelector('[data-action="submit"]');
 submitBtn.addEventListener("click", processFormData);
-
+BorderStyle="0"
 function processFormData(e) {
 
     const Num = ['1314', '6666', '8888', '9487', 'VIP0']
