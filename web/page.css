@@ -1,0 +1,51 @@
+.btn{
+    font-size: 20px;
+    margin-top: 40px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+.btn:hover{
+    box-shadow: inset 200px 0 0 0 #fff;
+    cursor: pointer;
+}
+.btn + .btn{
+    margin-left: 20px;
+}
+.checkin .p{    
+    font-size: 20px;
+}
+p + p{
+    padding-top: 50px;
+}
+.Content01 {
+    width: 100%;
+    line-height: 40px;
+}
+.Content02 {
+    width: 100%;
+    line-height: 40px;
+}
+
+.Title {
+    float: left;
+    width: 30%;
+    margin-right: 20px;
+    padding-top: 50px;
+}
+
+.Items {
+    float: left;
+    width: 25%;
+    padding-top: 50px;
+}
+
+.AlignRight {
+    text-align: right;
+}
+.Content01 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.Content02 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: initial;
+}

@@ -1,0 +1,78 @@
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-color: blanchedalmond;
+}
+.layout{
+    display: flex;
+    align-items: stretch;
+}
+.side-menu{
+    width: 200px;
+    height: 100vh;
+    padding: 20px 0;
+    min-width: 150px;
+    box-sizing: border-box;
+    background-color: #6ab4fe;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .6);
+}
+.side-menu form{
+    display: flex;
+    margin: 0 10px;
+}
+.nav h2{
+    padding: 10px;
+    color: #fff;
+    font-size: xx-large;
+}
+.nav a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: large;
+    text-decoration: none;
+    position: relative;
+}
+.nav li + li > a::before{
+    content: '';
+    position: absolute;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    left: 10px;
+    right: 10px;
+    top: 0;
+}
+.nav li:hover > a{   
+    box-shadow: inset 200px 0 0 0 rosybrown;
+}
+.nav li{
+    position: relative;
+}
+.nav ul{
+    display: none;
+    position: absolute;
+    left: 100%;
+    width: 150px;
+    top: 5px;
+    background-color: rgba(106, 180, 254, .6);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+}
+.nav li:hover ul{
+    display: block;
+}
+.content{
+    padding: 20px 20px 20px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
