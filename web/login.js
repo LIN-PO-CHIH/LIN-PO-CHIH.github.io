@@ -11,7 +11,8 @@ function processFormData(e) {
     const password = inputElement[1].value;
 
     window.confirm("公司編號： " + number + "\n登入密碼： " + password + "\n\n確認登入？")
-        open("main.html");
+        Response.statusCode = 301;
+        Response.setHeader("Location","/main.html");
 /*
     if(number == '' || password == ''){
         window.confirm("欄位不可為空！");

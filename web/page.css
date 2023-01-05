@@ -45,7 +45,48 @@ p + p{
 }
 .Content01 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    /*opacity: 1;*/
 }
-.Content02 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: initial;
+.img #preview{
+    width: 400px;
+    height: 300px;
+}
+.img input{
+    display: flex;
+    flex-direction: column;
+}
+.img p{
+    padding-bottom: 10px;
+}
+.img #upload{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: red ;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.img #upload:hover{
+    box-shadow: inset 190px 0 0 0 rgb(125, 120, 120);
+    cursor: pointer;
+}
+#dropdown03{
+    margin: 50px 0 20px 0;
+    width: 200px;
+}
+#sele{
+    margin-bottom: 10px;
+}
+.formcheck{
+    width: 300px;
+}
+.formcheck input{
+    width: 15%;
+    flex-direction: row;
+}
+p + form{
+    margin-top: 10px;
+}
+.lab{
+    padding: 20px 0 20px 0;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>xxx作帳系統</title>
     <link rel = stylesheet href = "main.css" />
+    <link rel = stylesheet href = "page.css" />
     <script src="main.js"></script>
 
 </head>
@@ -37,9 +38,29 @@
 
     <div class="content">
         <h2 id="p06">公帳申請</h2>
+        <p></p><p>申請類型：</p>
+        <form class="formcheck"onclick="select()">
+            <input type="radio" name="location" id="sele" value="食">食
+            <input type="radio" name="location" id="sele" value="住">住
+            <input type="radio" name="location" id="sele" value="行">行
+            <input type="radio" name="location" id="sele" value="其他">其他
+        </form>
+        <from>
+            <div class="lab">
+                <label for="apply">申請金額：
+                <input type="number" id="apply"></label>
+            </div>
+        </from>
+        <div class="img">
+            <p>統編發票上傳：</p>
+            <img id="preview">
+            <input type="file" name="" id="uploadImage" multiple="multiple">
+            <button class="btn" id="upload">確認上傳</button>
+        </div>
     </div>
     
 
+    <script src="p06.js"></script>
 </div>
 
 

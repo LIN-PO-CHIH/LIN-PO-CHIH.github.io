@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>xxx作帳系統</title>
     <link rel = stylesheet href = "main.css" />
+    <link rel = stylesheet href = "page.css" />
     <script src="main.js"></script>
 
 </head>
@@ -37,11 +38,26 @@
     
     <div class="content">
         <h2 id="p02">支出登入</h2>
-        
+        <select id="dropdown03" onchange="select()">
+            <option value="">請選擇支出項目</option>
+            <option value="貨項1">貨項1</option>
+            <option value="貨項2">貨項2</option>
+            <option value="貨項11">貨項11</option>
+            <option value="貨項22">貨項22</option>
+            <option value="貨項111">貨項111</option>
+            <option value="貨項222">貨項222</option>
+            <option value="貨項0000">貨項0000</option>
+        </select>
+        <p id="sele"></p>
+        <div class="img">
+            <img id="preview">
+            <input type="file" name="" id="uploadImage" multiple="multiple">
+            <button class="btn" id="upload">確認上傳</button>
+        </div>
     </div>
     
 
-    <script src="p02.js"></script>
+    <script src="p03.js"></script>
 </div>
 
 
