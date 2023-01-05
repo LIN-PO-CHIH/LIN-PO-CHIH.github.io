@@ -14,6 +14,7 @@ function GetH(){
 }
 function towork(){
     if(!workstate & (GetH()-checkinH >= 1)){
+        geoFindMe();
         document.getElementById("checktime").textContent = "打卡時間(上班)" + GetTime();
         checkinH = GetH();
         workstate = true;
@@ -27,12 +28,37 @@ function towork(){
 
 function offwork(){
     if(workstate){
+        geoFindMe();
         document.getElementById("checktime").textContent = "打卡時間(下班)" + GetTime();
         workstate = false;
     }else{
         window.alert("你目前正在休息\n請先打卡上班後再次嘗試！");
     }
 
+}
+function geoFindMe() {
+
+    const status = document.querySelector('#status');
+    const mapLink = document.querySelector('#map-link');
+  
+    function success(position) {
+      const latitude  = position.coords.latitude;
+      const longitude = position.coords.longitude;
+  
+      status.textContent = "經度:" + latitude + "° 緯度:"+ longitude + "° ";
+    }
+  
+    function error() {
+      status.textContent = '無法定位';
+    }
+  
+    if (!navigator.geolocation) {
+      status.textContent = '請開啟定位';
+    } else {
+      status.textContent = '載入中…';
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+  
 }
 var call1 = document.getElementById('act1');
 var call2 = document.getElementById('act2');
