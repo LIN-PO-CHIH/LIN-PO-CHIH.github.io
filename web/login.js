@@ -10,10 +10,10 @@ function processFormData(e) {
     const number = inputElement[0].value;
     const password = inputElement[1].value;
 
-    window.confirm("公司編號： " + number + "\n登入密碼： " + password + "\n\n確認登入？")
+    /*window.confirm("公司編號： " + number + "\n登入密碼： " + password + "\n\n確認登入？")
         Response.statusCode = 301;
-        Response.setHeader("Location","/main.html");
-/*
+        Response.setHeader("Location","/main.html");*/
+
     if(number == '' || password == ''){
         window.confirm("欄位不可為空！");
     }else if(Num.indexOf(number) == -1){
@@ -21,5 +21,5 @@ function processFormData(e) {
     }else{
         if(window.confirm("公司編號： " + number + "\n登入密碼： " + password + "\n\n確認登入？"))
             window.open("main.html")
-    }*/
+    }
 }
