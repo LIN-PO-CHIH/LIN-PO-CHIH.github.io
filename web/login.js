@@ -1,3 +1,4 @@
+localStorage.setItem('userlogin', 'fail');
 const call = document.querySelector('[data-action="submit"]');
 call.addEventListener("click", processFormData);
 BorderStyle="0"
@@ -19,7 +20,9 @@ function processFormData(e) {
     }else if(Num.indexOf(number) == -1){
         window.confirm("公司編號輸入錯誤！");
     }else{
-        if(window.confirm("公司編號： " + number + "\n登入密碼： " + password + "\n\n確認登入？"))
-            window.open("main.html")
+        if(window.confirm("公司編號： " + number + "\n\n確認登入？")){
+            localStorage.setItem('userlogin', 'success');
+            window.location.href = 'main.html';
+        }
     }
 }

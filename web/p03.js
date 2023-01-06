@@ -1,3 +1,6 @@
+if(localStorage.getItem('userlogin') != 'success'){
+    window.location.href = "login.html";
+}
 var uploadimg = document.getElementById("uploadImage");
 var upload = document.getElementById("upload");
 uploadimg.addEventListener("change",handlefile);

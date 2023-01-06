@@ -1,4 +1,6 @@
-
+if(localStorage.getItem('userlogin') != 'success'){
+    window.location.href = "login.html";
+}
 function GetTime(time){
     const NowDate = new Date();
     const h = NowDate.getHours();
@@ -42,10 +44,10 @@ function geoFindMe() {
     const mapLink = document.querySelector('#map-link');
   
     function success(position) {
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
+      const latitude  = position.coords.latitude*10000000;
+      const longitude = position.coords.longitude*10000000;
   
-      status.textContent = "經度:" + latitude + "° 緯度:"+ longitude + "° ";
+      status.textContent = "(" + latitude + ","+ longitude + ")";
     }
   
     function error() {

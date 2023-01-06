@@ -1,3 +1,6 @@
+if(localStorage.getItem('userlogin') != 'success'){
+    window.location.href = "login.html";
+}
 var call1 = document.getElementById('act1');
 var call2 = document.getElementById('act2');
 call1?.addEventListener("click", send);

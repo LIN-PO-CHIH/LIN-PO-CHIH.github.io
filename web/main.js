@@ -1,4 +1,6 @@
-
+if(localStorage.getItem('userlogin') != 'success'){
+    window.location.href = "login.html";
+}
 function ShowTime(){
     var NowDate = new Date();
     var yy = NowDate.getFullYear();
